@@ -1,11 +1,30 @@
 let rightArrow = document.querySelector(".right")
 let leftArrow = document.querySelector(".left")
-let slide = document.querySelector(".slide")
+let slide = document.querySelectorAll(".slide")
 
-rightArrow.addEventListener("click" ,function (){
+
+let nextSlide = function(){
     let current = document.querySelector(".current")
-    current.nextElementSibling.classList.add("current")
     current.classList.remove("current")
+    if(current.nextElementSibling){
+    current.nextElementSibling.classList.add("current")
+    }else{
+    slide[0].classList.add("current")
+}
+}
 
 
-})
+let prevSlide = function(){
+
+    let current = document.querySelector(".current")
+    current.classList.remove("current")
+    if(current.previousElementSibling){
+    current.previousElementSibling.classList.add("current")
+    }else{
+    slide[slide.length-1].classList.add("current")
+
+}
+}
+
+rightArrow.addEventListener("click" ,nextSlide)
+leftArrow.addEventListener("click",prevSlide)
