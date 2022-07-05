@@ -28,3 +28,4 @@ let prevSlide = function(){
 
 rightArrow.addEventListener("click" ,nextSlide)
 leftArrow.addEventListener("click",prevSlide)
+//this is not complete version up to now
