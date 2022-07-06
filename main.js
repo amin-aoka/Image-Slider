@@ -3,29 +3,29 @@ let leftArrow = document.querySelector(".left")
 let slide = document.querySelectorAll(".slide")
 
 
-let nextSlide = function(){
+let nextSlide = function () {
     let current = document.querySelector(".current")
     current.classList.remove("current")
-    if(current.nextElementSibling){
-    current.nextElementSibling.classList.add("current")
-    }else{
-    slide[0].classList.add("current")
-}
+    if (current.nextElementSibling) {
+        current.nextElementSibling.classList.add("current")
+    } else {
+        slide[0].classList.add("current")
+    }
 }
 
 
-let prevSlide = function(){
+let prevSlide = function () {
 
     let current = document.querySelector(".current")
     current.classList.remove("current")
-    if(current.previousElementSibling){
-    current.previousElementSibling.classList.add("current")
-    }else{
-    slide[slide.length-1].classList.add("current")
+    if (current.previousElementSibling) {
+        current.previousElementSibling.classList.add("current")
+    } else {
+        slide[slide.length - 1].classList.add("current")
 
-}
+    }
 }
 
-rightArrow.addEventListener("click" ,nextSlide)
-leftArrow.addEventListener("click",prevSlide)
-//this is kjkjjnot complete version up to now
+rightArrow.addEventListener("click", nextSlide)
+leftArrow.addEventListener("click", prevSlide)
+//this is  complete version up to now
