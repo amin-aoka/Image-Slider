@@ -62,7 +62,7 @@
 
 }
 
-.slide .box{
+.box{
     background-color: white;
     width:25rem;
     border-radius: 3px;
@@ -80,7 +80,7 @@
 
 .current .box{
     transform: translateX(1rem);
-    transition: transform 1s ease-out;
+    transition: transform 0.75s ease-out;
 }
 
 
