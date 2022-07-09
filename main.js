@@ -1,6 +1,7 @@
 let rightArrow = document.querySelector(".right")
 let leftArrow = document.querySelector(".left")
 let slide = document.querySelectorAll(".slide")
+let auto = false;
 
 
 let nextSlide = function () {
@@ -12,7 +13,6 @@ let nextSlide = function () {
         slide[0].classList.add("current")
     }
 }
-
 
 let prevSlide = function () {
 
@@ -29,3 +29,7 @@ let prevSlide = function () {
 rightArrow.addEventListener("click", nextSlide)
 leftArrow.addEventListener("click", prevSlide)
 //this is  complete version up to now
+
+if (auto){
+setInterval(nextSlide, 5000);
+}

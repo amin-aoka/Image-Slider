@@ -14,16 +14,13 @@
     opacity:0;
     transition: opacity 0.4s ease-in-out;
     position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .slide:first-child{
     background-image: url(./img/1.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-repeat:no-repeat;
-background-position:center;
 }
 .slide:nth-child(2){
     background-image: url(./img/2.jpg) ;
@@ -65,7 +62,7 @@ background-position:center;
 
 }
 
-.box{
+.slide .box{
     background-color: white;
     width:25rem;
     border-radius: 3px;
@@ -79,12 +76,24 @@ background-position:center;
 .box h2{
     margin-bottom:0.5rem ;
     text-transform: capitalize;
-
 }
 
 .current .box{
     transform: translateX(1rem);
     transition: transform 1s ease-out;
+}
 
+
+@media(max-width:500px){
+    .box{
+        transform: none;
+        left:0px;
+        bottom:-120px;
+        width:100%;
+    }
+
+    .current .box{
+        transform: translateY(-120px);
+    }
 
 }
