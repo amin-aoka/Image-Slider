@@ -2,7 +2,7 @@ let rightArrow = document.querySelector(".right")
 let leftArrow = document.querySelector(".left")
 let slide = document.querySelectorAll(".slide")
 let auto = false;
-
+//functions
 
 let nextSlide = function () {
     let current = document.querySelector(".current")
