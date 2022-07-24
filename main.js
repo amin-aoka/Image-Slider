@@ -33,3 +33,5 @@ leftArrow.addEventListener("click", prevSlide)
 if (auto){
 setInterval(nextSlide, 5000);
 }
+
+//outlook extension added
